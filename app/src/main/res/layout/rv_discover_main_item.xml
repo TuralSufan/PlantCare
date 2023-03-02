@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/main_bg"
+        android:clipToOutline="false"
+        android:elevation="20dp"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/ivMainItem"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/spatifilum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAddFavoriteMainItem"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingHorizontal="4dp"
+            android:src="@drawable/florist"
+            app:layout_constraintBottom_toBottomOf="@id/tvItemTitle"
+            app:layout_constraintStart_toEndOf="@id/ivMainItem"
+            app:layout_constraintTop_toTopOf="@id/tvItemTitle" />
+
+        <TextView
+            android:id="@+id/tvItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/dm_sans"
+            android:maxLines="1"
+            android:text="Spatifilum (Peace Lily)"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/ibAddFavorite"
+            app:layout_constraintStart_toEndOf="@id/ivAddFavoriteMainItem"
+            app:layout_constraintTop_toTopOf="@id/ivMainItem" />
+
+        <ImageButton
+            android:id="@+id/ibAddFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:src="@drawable/ic_outline_favorite_border_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMainItemDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/dm_sans"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:text="this tex about spatifilum, and its fs sdk skd csd"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivMainItem"
+            app:layout_constraintTop_toBottomOf="@id/tvItemTitle" />
+
+        <ImageButton
+            android:id="@+id/btnMainItemNavigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/arrow_bg"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="4dp"
+            android:src="@drawable/ic_outline_arrow_forward_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">PlantCare</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="webclient_id">893004293637-rlk9s1qql4pu8a4ver6aslukofdbdsi2.apps.googleusercontent.com</string>
+    <string name="search_hint"><font size="14">Search something...</font></string>
+    <string name="category"><font size="14">Categories</font></string>
+    <string name="checking_states">Checking states…</string>
+    <string name="sign_in">Sign In</string>
+    <string name="please_try_sign_in">Please try sign in…</string>
+    <string name="profile">Profile</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="update">Update</string>
+    <string name="ProfileEmailTitle">You can update your email address…</string>
+    <string name="ProfilePasswordTitle">You can update your password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="google">Continue with Google</string>
+    <string name="continue_without">Continue without registration</string>
+    <string name="click_here">Click here</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="by_creating_an_account_you_agree_to_our">By creating an account, you agree to our</string>
+    <string name="term_amp_conditions"><![CDATA[Term & Conditions]]></string>
+    <string name="create_an_account_to_continue">Create an account to continue!</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="let_s_sign_you_in">Let\'s Sign You In</string>
+    <string name="welcome_back_you_ve_been_missed">Welcome back, you’ve been missed!</string>
+    <string name="choose_plant_photos">Choose plant photos</string>
+    <string name="new_alarm">New Alarm</string>
+    <string name="plant_soil">Plant Soil</string>
+    <string name="plant_name">Plant Name</string>
+    <string name="channel_description">notification channel description</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="plant_temperature">Plant Temperature</string>
+    <string name="plant_humidity">Plant Humidity</string>
+    <string name="plant_watering">Plant Watering</string>
+    <string name="plant_lighting">Plant Lighting</string>
+    <string name="enter_information_about_plant">Enter plant information</string>
+    <string name="wateringGuide"><b> Foliage Plants: </b> These plants generally prefer to have their soil kept slightly moist but not overly saturated. Allow the top inch of soil to dry out before watering, and avoid letting the plant sit in standing water.
+<br /><br />
+<b>Flowering Plants:</b> These plants have similar watering needs as foliage plants, but may require slightly more water when they are actively blooming. Avoid getting water on the flowers themselves, as this can cause them to rot.
+<br /><br />
+<b>Cacti and Succulents:</b> These plants are adapted to arid conditions and require well-draining soil to prevent their roots from becoming waterlogged. Allow the soil to dry out completely before watering, and water deeply but infrequently.
+<br /><br />
+<b>Ferns:</b> These plants prefer consistently moist soil and high humidity. Water regularly to keep the soil evenly moist, but be careful not to overwater, as this can cause the roots to rot.
+<br /><br />
+<b>Palms:</b> These plants prefer to have their soil kept consistently moist, but not waterlogged. Water deeply and allow the top inch of soil to dry out before watering again.
+<br /><br />
+<b>Hanging Plants:</b> These plants may require slightly more frequent watering than other houseplants due to their exposure to air and light. Water when the top inch of soil is dry, and be sure to water evenly to prevent the plant from becoming lopsided.
+<br /><br />
+<b>Air Plants:</b> These plants absorb moisture through their leaves rather than their roots. Mist them regularly or soak them in water for a few hours every few weeks.
+<br /><br />
+<b>Bonsai:</b> These plants require frequent watering due to their small size and shallow soil. Water thoroughly and allow the top inch of soil to dry out before watering again.
+<br /><br />
+<b>Herb Plants:</b> These plants prefer consistently moist soil. Water regularly and deeply, but be careful not to overwater, as this can cause the roots to rot.
+<br /><br />
+<b>Aquatic Plants:</b> These plants require water to survive and should be kept in a container of water or in a pond. Change the water regularly to prevent it from becoming stagnant and add fertilizer as needed to promote healthy growth.
+</string>
+    <string-array name="categories">
+        <item>Ferns</item>
+        <item>Cacti</item>
+        <item>Foliage plants</item>
+        <item>Palms</item>
+        <item>Flowering plants</item>
+        <item>Succulent</item>
+        <item>Air Plant</item>
+        <item>Vines and climbers</item>
+        <item>Bonsai</item>
+        <item>Bulbs and corms</item>
+
+    </string-array>
+
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+
+    </string-array>
+
+
+</resources>
