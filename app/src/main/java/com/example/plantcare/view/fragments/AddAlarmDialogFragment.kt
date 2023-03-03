@@ -41,6 +41,7 @@ class AddAlarmDialogFragment : DialogFragment() {
             }
         }
 
+
         binding.btnSave.setOnClickListener {
             if (binding.switchAlarmItem.isChecked && binding.etRepeat.length() <= 0) {
                 binding.etRepeat.requestFocus()
