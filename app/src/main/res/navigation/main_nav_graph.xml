@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.plantcare.ui.SignInFragment"
+        android:name="com.example.plantcare.view.fragments.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in">
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.plantcare.ui.SignUpFragment"
+        android:name="com.example.plantcare.view.fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
 
@@ -48,7 +48,7 @@
 
     <fragment
         android:id="@+id/introFragment"
-        android:name="com.example.plantcare.ui.IntroFragment"
+        android:name="com.example.plantcare.view.fragments.IntroFragment"
         android:label="IntroFragment"
         tools:layout="@layout/fragment_intro">
 
@@ -60,7 +60,7 @@
 
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.example.plantcare.ui.AccountFragment"
+        android:name="com.example.plantcare.view.fragments.AccountFragment"
         android:label="AccountFragment"
         tools:layout="@layout/fragment_account">
         <action
@@ -77,7 +77,7 @@
 
     <fragment
         android:id="@+id/alarmFragment"
-        android:name="com.example.plantcare.ui.AlarmFragment"
+        android:name="com.example.plantcare.view.fragments.AlarmFragment"
         android:label="AlarmFragment"
         tools:layout="@layout/fragment_alarm">
         <action
@@ -85,13 +85,13 @@
             app:destination="@id/addAlarmDialogFragment" />
         <argument
             android:name="alarm"
-            app:argType="com.example.plantcare.models.AlarmData" />
+            app:argType="com.example.plantcare.model.models.AlarmData" />
     </fragment>
 
 
     <fragment
         android:id="@+id/discoverFragment"
-        android:name="com.example.plantcare.ui.DiscoverFragment"
+        android:name="com.example.plantcare.view.fragments.DiscoverFragment"
         android:label="DiscoverFragment"
         tools:layout="@layout/fragment_discover">
 
@@ -104,7 +104,7 @@
 
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.plantcare.ui.FavoritesFragment"
+        android:name="com.example.plantcare.view.fragments.FavoritesFragment"
         android:label="FavoritesFragment"
         tools:layout="@layout/fragment_favorites">
 
@@ -117,26 +117,26 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.plantcare.ui.DetailFragment"
+        android:name="com.example.plantcare.view.fragments.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="plant"
-            app:argType="com.example.plantcare.models.Plant" />
+            app:argType="com.example.plantcare.model.models.Plant" />
     </fragment>
     <fragment
         android:id="@+id/addPlantDialogFragment"
-        android:name="com.example.plantcare.ui.AddPlantFragment"
+        android:name="com.example.plantcare.view.fragments.AddPlantFragment"
         android:label="AddPlantDialogFragment"
         tools:layout="@layout/fragment_add_plant" />
     <dialog
         android:id="@+id/addAlarmDialogFragment"
-        android:name="com.example.plantcare.ui.AddAlarmDialogFragment"
+        android:name="com.example.plantcare.view.fragments.AddAlarmDialogFragment"
         android:label="AddAlarmDialogFragment"
         tools:layout="@layout/dialog_fragment_add_alarm" />
     <fragment
         android:id="@+id/checkUserFragment"
-        android:name="com.example.plantcare.ui.CheckUserFragment"
+        android:name="com.example.plantcare.view.fragments.CheckUserFragment"
         android:label="CheckUserFragment"
         tools:layout="@layout/fragment_check_user">
         <action
@@ -152,7 +152,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.plantcare.ui.ProfileFragment"
+        android:name="com.example.plantcare.view.fragments.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
 

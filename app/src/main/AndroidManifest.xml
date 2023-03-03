@@ -18,7 +18,7 @@
         android:theme="@style/Theme.PlantCare"
         tools:targetApi="31">
         <activity
-            android:name="com.example.plantcare.ui.MainActivity"
+            android:name="com.example.plantcare.view.MainActivity"
             android:exported="true"
             android:showOnLockScreen="true">
             <intent-filter>
@@ -30,7 +30,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name="com.example.plantcare.ui.AlarmActivity" android:showOnLockScreen="true"/>
+        <activity android:name="com.example.plantcare.view.AlarmActivity" android:showOnLockScreen="true"/>
 
         <receiver android:name="com.example.plantcare.util.MyBroadcastReceiver"
             android:exported="true"

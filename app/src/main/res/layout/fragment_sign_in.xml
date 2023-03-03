@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:background="#F3F8F9"
         android:outlineProvider="paddedBounds"
-        tools:context=".ui.SignInFragment">
+        tools:context=".view.fragments.SignInFragment">
 
 
         <TextView
