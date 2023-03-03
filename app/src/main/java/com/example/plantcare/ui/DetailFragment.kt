@@ -32,7 +32,7 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val plant = args.plant
-        viewModel = (activity as MainActivity).viewModel
+        viewModel = (activity as MainActivity).plantVM
 
         val list: List<String>? = plant.plantPhoto
         val mAdapter = DetailViewpagerAdapter(list)

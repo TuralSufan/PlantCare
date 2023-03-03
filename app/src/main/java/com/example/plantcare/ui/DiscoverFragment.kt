@@ -41,7 +41,7 @@ class DiscoverFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val cAdapter = DiscoverCategoriesAdapter(requireContext())
-        viewModel = (activity as MainActivity).viewModel
+        viewModel = (activity as MainActivity).plantVM
         binding.rvDiscoverCategories.adapter = cAdapter
         binding.rvDiscoverMainItems.adapter = mAdapter
         checkLoggedInSTate()

@@ -20,7 +20,7 @@ class AlarmFragment : Fragment() {
     private var _binding: FragmentAlarmBinding? = null
     private val binding get() = _binding!!
 
-    lateinit var viewModel: PlantViewModel
+    lateinit var alarmVM: AlarmViewModel
     private val mAdapter = AlarmAdapter()
 
 
@@ -33,13 +33,13 @@ class AlarmFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = (activity as MainActivity).viewModel
+        alarmVM = (activity as MainActivity).alarmVM
         val saveAlarmData = SaveAlarmData(requireContext())
 
 
         binding.rvAlarm.adapter = mAdapter
 
-        viewModel.getAlarms().observe(viewLifecycleOwner, Observer {
+        alarmVM.getAlarms().observe(viewLifecycleOwner, Observer {
             mAdapter.differ.submitList(it)
         })
 
@@ -59,14 +59,14 @@ class AlarmFragment : Fragment() {
                 val position = viewHolder.adapterPosition
                 val alarm = mAdapter.differ.currentList[position]
                 saveAlarmData.cancelAlarm(alarm.id!!)
-                viewModel.deleteAlarm(alarm)
+                alarmVM.deleteAlarm(alarm)
                 val snackbar =
                     Snackbar.make(requireView(), "Successfully deleted ", Snackbar.LENGTH_LONG)
                 snackbar.apply {
                     setAnchorView(binding.viewAlarm)
                     setAction("Undo") {
                         alarm.isActive = false
-                        viewModel.saveAlarm(alarm)
+                        alarmVM.saveAlarm(alarm)
 
                     }
                     show()
@@ -83,12 +83,12 @@ class AlarmFragment : Fragment() {
             when (it.isActive) {
                 true -> {
                     it.isActive = false
-                    viewModel.updateAlarm(it)
+                    alarmVM.updateAlarm(it)
                     saveAlarmData.setAlarm(it.id!!)
                 }
                 else -> {
                     it.isActive = true
-                    viewModel.updateAlarm(it)
+                    alarmVM.updateAlarm(it)
                     saveAlarmData.setAlarm(it.id!!)
                 }
             }

@@ -11,12 +11,14 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.plantcare.R
 import com.example.plantcare.databinding.ActivityMainBinding
 import com.example.plantcare.db.PlantDatabase
+import com.example.plantcare.repository.AlarmRepository
 import com.example.plantcare.repository.PlantRepository
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var viewModel: PlantViewModel
+    lateinit var plantVM: PlantViewModel
+    lateinit var alarmVM: AlarmViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +38,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val newsRepository = PlantRepository(PlantDatabase(applicationContext))
-        val viewModelProviderFactory = PlantViewModelFactory(newsRepository)
-        viewModel =
-            ViewModelProvider(this, viewModelProviderFactory).get(PlantViewModel::class.java)
+        val plantRepository = PlantRepository(PlantDatabase(applicationContext))
+        val plantVMProviderFactory = PlantViewModelFactory(plantRepository)
+        plantVM = ViewModelProvider(this, plantVMProviderFactory).get(PlantViewModel::class.java)
+
+
+        val alarmRepository = AlarmRepository(PlantDatabase(applicationContext))
+        val alarmVMProviderFactory = AlarmViewModelFactory(alarmRepository)
+        alarmVM = ViewModelProvider(this, alarmVMProviderFactory).get(AlarmViewModel::class.java)
 
 
         navController.addOnDestinationChangedListener { _, nd: NavDestination, _ ->

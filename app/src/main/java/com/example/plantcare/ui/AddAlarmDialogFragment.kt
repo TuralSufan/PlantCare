@@ -14,7 +14,7 @@ class AddAlarmDialogFragment : DialogFragment() {
     private var _binding: DialogFragmentAddAlarmBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: PlantViewModel
+    private lateinit var alarmVM: AlarmViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -25,7 +25,7 @@ class AddAlarmDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = (activity as MainActivity).viewModel
+        alarmVM = (activity as MainActivity).alarmVM
         binding.etRepeat.isEnabled = false
 
         binding.switchAlarmItem.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -59,7 +59,7 @@ class AddAlarmDialogFragment : DialogFragment() {
                     )
 
                 binding.etRepeat.isEnabled = false
-                viewModel.saveAlarm(alarm)
+                alarmVM.saveAlarm(alarm)
             }
         }
 
@@ -67,7 +67,7 @@ class AddAlarmDialogFragment : DialogFragment() {
             dismiss()
         }
 
-        viewModel.savedAlarmId.observe(viewLifecycleOwner) {
+        alarmVM.savedAlarmId.observe(viewLifecycleOwner) {
             it?.toInt()?.let {
                 SaveAlarmData(activity?.applicationContext!!).setAlarm(it)
                 dismiss()

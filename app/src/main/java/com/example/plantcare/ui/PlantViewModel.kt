@@ -1,10 +1,8 @@
 package com.example.plantcare.ui
 
-import SingleLiveEvent
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.plantcare.models.AlarmData
 import com.example.plantcare.models.Plant
 import com.example.plantcare.repository.PlantRepository
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,11 +12,9 @@ class PlantViewModel(
     val plantRepository: PlantRepository
 ) : ViewModel() {
 
-
     var listLiveData = MutableLiveData<List<Plant>>()
     private var listPlant: MutableList<Plant> = mutableListOf()
 
-    var savedAlarmId: SingleLiveEvent<Long> = SingleLiveEvent()
 
     init {
         getPlantsFromFirestore()
@@ -53,20 +49,5 @@ class PlantViewModel(
 
     fun getSavedPlants() = plantRepository.getSavedPlants()
 
-
-    fun saveAlarm(alarm: AlarmData) = viewModelScope.launch {
-        val alarmId = plantRepository.upsertAlarm(alarm)
-        savedAlarmId.postValue(alarmId)
-    }
-
-    fun deleteAlarm(alarm: AlarmData) = viewModelScope.launch {
-        plantRepository.deleteAlarm(alarm)
-    }
-
-    fun getAlarms() = plantRepository.getAlarms()
-
-    fun updateAlarm(alarm: AlarmData) = viewModelScope.launch {
-        plantRepository.updateAlarm(alarm)
-    }
 
 }
