@@ -33,19 +33,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-       <!-- <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvIntro"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/rv_intro_item" />-->
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpagerDetail"
@@ -77,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dm_sans"
-        android:text="Welcome Plant"
+        android:text="@string/welcome_to_plantcare"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -93,7 +80,7 @@
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/dm_sans_medium"
         android:paddingTop="20dp"
-        android:text="Grow your health, Grow a garden. Gardening is a way to a healthy life"
+        android:text="@string/grow_your_health_grow_a_garden_gardening_is_a_way_to_a_healthy_life"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,7 +98,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/custom_button_intro2"
-        android:text="Get Started"
+        android:text="@string/get_started"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvIntroDesc" />

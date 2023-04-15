@@ -59,6 +59,11 @@
 <br /><br />
 <b>Aquatic Plants:</b> These plants require water to survive and should be kept in a container of water or in a pond. Change the water regularly to prevent it from becoming stagnant and add fertilizer as needed to promote healthy growth.
 </string>
+    <string name="welcome_to_plantcare">Welcome to PlantCare</string>
+    <string name="grow_your_health_grow_a_garden_gardening_is_a_way_to_a_healthy_life">Grow your health, Grow a garden. Gardening is a way to a healthy life</string>
+    <string name="get_started">Get Started</string>
+    <string name="account">Account</string>
+    <string name="sign_out">Sign Out</string>
     <string-array name="categories">
         <item>Ferns</item>
         <item>Cacti</item>

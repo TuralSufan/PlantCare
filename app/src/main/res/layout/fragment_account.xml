@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Account"
+                android:text="@string/account"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -91,9 +91,8 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layoutSettings"
+                android:id="@+id/layoutSignOut"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:foreground="?android:attr/selectableItemBackground"
@@ -102,50 +101,13 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutProfile">
 
                 <TextView
-                    android:id="@+id/tvSettings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="15dp"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/dm_sans"
-                    android:text="Settings"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/ivIconSettings"
-                    app:layout_constraintStart_toEndOf="@+id/ivIconSettings"
-                    app:layout_constraintTop_toTopOf="@+id/ivIconSettings" />
-
-                <ImageView
-                    android:id="@+id/ivIconSettings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:src="@drawable/ic_outline_settings_24"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layoutSignOut"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutSettings">
-
-                <TextView
                     android:id="@+id/tvSignOut"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="15dp"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/dm_sans"
-                    android:text="Sign Out"
+                    android:text="@string/sign_out"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"

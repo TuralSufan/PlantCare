@@ -88,10 +88,7 @@ class SignInFragment : Fragment() {
     private fun result(task: Task<GoogleSignInAccount>) {
         if (task.isSuccessful) {
             val account: GoogleSignInAccount = task.result
-            if (account != null) {
-                updateSomeUI(account)
-
-            }
+            updateSomeUI(account)
         }
     }
 

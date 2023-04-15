@@ -30,7 +30,7 @@ class AddAlarmDialogFragment : DialogFragment() {
         alarmVM = (activity as MainActivity).alarmVM
         binding.etRepeat.isEnabled = false
 
-        binding.switchAlarmItem.setOnCheckedChangeListener { buttonView, isChecked ->
+        binding.switchAlarmItem.setOnCheckedChangeListener { _ , isChecked ->
             if (isChecked) {
                 binding.etRepeat.isEnabled = true
             } else if (binding.etRepeat.text == null) {
@@ -52,14 +52,13 @@ class AddAlarmDialogFragment : DialogFragment() {
                 val minute: Int = binding.timePickerAlarm.minute
                 val repeatDay: Int? = binding.etRepeat.text.toString().toIntOrNull()
                 val category: String = binding.spinnerAlarm.selectedItem.toString()
-                val alarm =
-                    AlarmData(
-                        hour = hour,
-                        minute = minute,
-                        repeatDay = repeatDay,
-                        category = category,
-                        isActive = isActive
-                    )
+                val alarm = AlarmData(
+                    hour = hour,
+                    minute = minute,
+                    repeatDay = repeatDay,
+                    category = category,
+                    isActive = isActive
+                )
 
                 binding.etRepeat.isEnabled = false
                 alarmVM.saveAlarm(alarm)
